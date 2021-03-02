@@ -15,10 +15,10 @@ class SoundTrack(models.Model):
     Chicese_list = models.CharField(max_length=255,choices=Tracks,verbose_name='Choice What is it')
     TrackLink = models.CharField(max_length=10000,verbose_name='Item Link')
     slugTrack = models.SlugField(max_length=255,null=True,blank=True,verbose_name='Let this field empty', unique=True)
-    likes = models.ManyToManyField(User, related_name='blogpost_like')
+    # likes = models.ManyToManyField(User, related_name='blogpost_like')
 
-    def number_of_likes(self):
-        return self.likes.count()
+    # def number_of_likes(self):
+    #     return self.likes.count()
     def __str__(self): 
         return self.Title
     def save(self, *args, **kwargs): 
@@ -27,7 +27,9 @@ class SoundTrack(models.Model):
     def YouTubeVideoEmbed(self):
         return(self.TrackLink).replace('watch?v=','embed/')   
     def SoundTrackEmbed(self):
-        return(self.TrackLink[0:173]).replace('<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="','')
+        cut  = self.TrackLink[88:]
+        get = cut[0:86]
+        return get
     class Meta:
         verbose_name_plural             =                       "Sounds And Youtube"  
 

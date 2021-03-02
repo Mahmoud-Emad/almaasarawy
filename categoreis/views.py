@@ -29,13 +29,6 @@ def CatsView(request):
     }
     return render(request , "cats/CatsView.html" , context)
 
-# def CatsView(request):
-#     categories = MotherCategory.objects.all()
-#     context = {
-#         'categories':categories
-#     }
-#     return render(request , "CatsView.html" , context)
-
 
 
 def menu_categories(request,cats):

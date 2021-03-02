@@ -88,6 +88,7 @@ class SubMultiCategory(models.Model):
     slug = models.SlugField(max_length=255,null=True,blank=True,verbose_name='Let this field empty', unique=True)
     Chicese_list = models.CharField(max_length=255,choices=choice_list,default='Category Page',verbose_name='Choice What is it')
     TrackLink = models.CharField(max_length=10000,verbose_name='Track Link',null=True,blank=True)
+    
     def save(self, *args, **kwargs):
         self.slug = slugify(str(self.TitleEnglish)+ '-id-' + str(self.id))
         super(SubMultiCategory,self).save(*args, **kwargs) 

@@ -65,14 +65,25 @@
         <div class="row">
           
           {% for some in Tracks %}
-              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
-                <a href="{% url 'subTweo' category_cats.slug category.slug some.slug %}" class="item">
-                  <div class="item-inner">
-                    <h2>{{some.Title}}</h2>
-                    <h2>{{some.category}}</h2>
+              {% if some.IsTrack %}
+                  <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+                    <a href="{{some.TrackLink}}" target='_blank' class="item">
+                      <div class="item-inner">
+                        <h2>{{some.Title}}</h2>
+                        <h2>{{some.category}}</h2>
+                      </div>
+                    </a>
                   </div>
-                </a>
-              </div>
+              {% else %}
+                  <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+                    <a href="{% url 'subTweo' category_cats.slug category.slug some.slug %}" class="item">
+                      <div class="item-inner">
+                        <h2>{{some.Title}}</h2>
+                        <h2>{{some.category}}</h2>
+                      </div>
+                    </a>
+                  </div>
+              {% endif %}
 
             
           {% endfor %}

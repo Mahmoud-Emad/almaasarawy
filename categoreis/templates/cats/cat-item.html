@@ -67,6 +67,7 @@
         <h1>{{sound.Title}}</h1>
       </div>
       {% if sound.Chicese_list == 'Sound Cloud Track' %}
+
         <div class="category-items">
             <div class="row">
                 <div class="col-12">
@@ -77,15 +78,11 @@
                             </iframe>
                         </div>
                         <div class="line"></div>
-                        <div class="fav">
-                            <span>0</span>
-                            <i class="fal fa-heart"></i>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        {% else %}
+        {% elif sound.Chicese_list == 'YouTube Video' %}
           <div class="category-items">
               <div class="row">
                 <div class="col-12">
@@ -95,10 +92,6 @@
                           frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                       </div>
                     <div class="line"></div>
-                      <div class="fav">
-                          <span>0</span>
-                          <i class="fal fa-heart"></i>
-                      </div>
                     </div>
                 </div>
               </div>
