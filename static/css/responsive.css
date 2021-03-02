@@ -1,0 +1,689 @@
+
+/******************************
+
+[Table of Contents]
+
+1. Full Home Page
+2. About Me Popup
+
+******************************/
+
+/* Extra Larg */
+
+@media (min-width: 1280px){
+
+  /* Carousel */
+  .intro-carousel, .intro-carousel .item{
+    height: 600px;
+  }
+
+  .item.slide2 .bg-item img.assest01{
+    width: 30%;
+  }
+
+  .item.slide2 .bg-item img.assest02 {
+    right: 45%;
+    width: 40%;
+  }
+
+}
+
+/* Large devices */
+@media (max-width:1199.98px){
+
+  /* Carousel */
+  .intro-carousel,
+  .intro-carousel .item{
+    height: 500px;
+  }
+
+  .item.slide1 .item-info .item-banner{
+    width: 350px;
+  }
+
+  .item .item-info .item-text .item-text-inner{
+    margin-right: 0;
+  }
+
+  /* Get Site */
+  .get-site .get-site-inner{
+    padding: 0 10px;
+  }
+
+  .get-site .item{
+    margin: 0 25px;
+  }
+
+}
+
+/* Medium devices */
+@media (max-width:991.98px){
+
+  /* Header */
+
+  .header .navbar{
+    padding: 20px 0;
+  }
+
+  .header .navbar .navbar-toggler{
+    padding: 0;
+  }
+
+  .header .navbar .navbar-brand{
+    width: 80px;
+  }
+
+  .header .navbar .navbar-nav{
+    margin: 0;
+    text-align: center;
+  }
+
+  .navbar .navbar-nav .nav-item.active .nav-link::before{
+    display: none;
+  }
+
+  .navbar-nav .dropdown-menu{
+    background-color: var(--main-color);
+  }
+
+  .navbar-nav .dropdown-menu .dropdown-item{
+    color: #fff;
+    padding-right: 30px;
+    border-color: #81818145;
+  }
+
+  .navbar-nav .dropdown-menu .dropdown-item:not(:last-child){
+    margin-bottom: 15px;
+  }
+
+  /* Carousel */
+  .intro-carousel, .intro-carousel .item{
+    height: 400px;
+  }
+
+  .item .item-info .item-text{
+    justify-content: center;
+  }
+
+  .intro-carousel-inner .item .intro-text{
+    font-size: 30px;
+  }
+
+  .intro-carousel-inner .item .intero-heading{
+    font-size: 60px;
+    padding-bottom: 30px;
+  }
+
+  .intro-carousel-inner .item .intro-text2{
+    font-size: 30px;
+    margin: 40px 0 0;
+  }
+
+  .intro-carousel-inner .item .item-info .item-text .item-text-inner{
+    margin: 0;
+  }
+
+  /* Slide 1 */
+  .item.slide1 .item-info .item-banner{
+    width: 280px;
+  }
+
+  /* Slide 2 */
+  .item.slide2 .item-info .item-banner{
+    width: 315px;
+  }
+
+  .intro-carousel-inner .item.slide2 .item-info .item-text .item-text-inner{
+    width: 85%;
+  }
+
+  .intro-carousel-inner .item.slide2 .keyword{
+    margin: 0 0 18px;
+    font-size: 30px;
+  }
+
+  .intro-carousel-inner .item.slide2 .subscribe-to-channel{
+    margin: 40px 0 0;
+  }
+
+  .intro-carousel-inner .item.slide2 .subscribe-to-channel span{
+    font-size: 30px;
+  }
+
+  .intro-carousel-inner .item.slide2 .subscribe-to-channel .subscribe{
+    padding: 6px 13px;
+    font-size: 16px;
+    margin: 16px 0 0;
+  }
+
+  .intro-carousel-inner .item.slide2 .subscribe-to-channel .subscribe i{
+    font-size: 22px;
+  }
+
+
+  /* Intro Wrapper */
+  .intro-wrapper .wrapper-inner .author{
+    right: -90px;
+  }
+
+  .intro-wrapper .wrapper-inner .author2{
+    left: -80px;
+  }
+
+  /* Get Site */
+
+  .get-site::after {
+    width: 60%;
+    height: 40px;
+  }
+
+  .get-site .item {
+    margin: 20px 125px;
+  }
+
+  /* Social Item */
+  .social-media .social-media-inner .items .item {
+    width: 55px;
+    height: 55px;
+    margin: 0 22px;
+    font-size: 25px;
+  }
+
+  .social-media .social-media-inner .items .item i{
+    line-height: 55px;
+  }
+
+  /* About Me */
+  .about-me .container{
+    max-width: 100%;
+  }
+
+  .about-me .close-btn{
+    right: 8px;
+  }
+
+  .about-me-inner .about-me-header .header-box .line{
+    width: 50%;
+  }
+
+  .box-img{
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+  }
+
+  .title-box{
+    padding: 35px 40px;
+  }
+
+  .box-line{
+    width: 80%  !important;
+    height: 20px  !important;
+    margin: 10px auto 0  !important;
+  }
+
+  .about-me-inner .about-me-body .intro .info-text p{
+    font-size: 18px;
+  }
+
+  .about-me-inner .about-me-body .intro .info-text span{
+    font-size: 16px;
+  }
+
+  .box-title{
+    font-size: 28px;
+  }
+
+}
+
+/* Small devices */
+@media (max-width:767.98px){
+
+  /* Header */
+  .header .navbar{
+    padding: 10px 0;
+  }
+  .header .navbar .navbar-brand{
+    width: 60px;
+  }
+  
+  /* Carousel */
+  .intro-carousel, .intro-carousel .item{
+    height: 250px;
+  }
+
+  .intro-carousel-inner .item .item-info .item-text .item-text-inner{
+    margin-right: 10px;
+  }
+
+  .intro-carousel-inner .item .intro-text{
+    font-size: 20px;
+  }
+
+  .intro-carousel-inner .item .intero-heading{
+    margin: 0;
+    font-size: 35px;
+    font-weight: 500;
+    padding-bottom: 5px;
+  }
+
+  .intro-carousel-inner .item .intro-text2 {
+    font-size: 20px;
+    margin: 30px 0 0;
+  }
+
+  /* Slide 1 */
+  .item.slide1 .item-info .item-banner{
+    width: 100%;
+  }
+  
+
+  /* Slide 2 */
+  .item.slide2 .item-info .item-banner{
+    width: 100%;
+  }
+
+  .intro-carousel-inner .item.slide2 .intro-text{
+    line-height: 1.2;
+  }
+
+  .intro-carousel-inner .item.slide2 .keyword {
+    margin: 0 0 8px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .intro-carousel-inner .item.slide2 .subscribe-to-channel {
+    margin: 25px 0 0;
+  }
+
+  .intro-carousel-inner .item.slide2 .subscribe-to-channel span{
+    font-size: 18px;
+  }
+
+  .intro-carousel-inner .item.slide2 .subscribe-to-channel .subscribe{
+    padding: 3px 10px;
+    font-size: 14px;
+    margin: 12px 0 0;
+  }
+
+  .intro-carousel-inner .item.slide2 .subscribe-to-channel .subscribe i{
+    vertical-align: -1px;
+    font-size: 17px;
+  }
+
+  /* Intro Wrapper */
+  .intro-wrapper{
+    padding: 70px 15px;
+  }
+
+  .intro-wrapper .wrapper-inner .wrapper-title{
+    font-size: 25px;
+  }
+
+  .intro-wrapper .wrapper-inner .author {
+    font-size: 18px;
+    bottom: 55px;
+    right: 0;
+  }
+
+  .intro-wrapper .wrapper-inner .author2 {
+    font-size: 18px;
+    top: 55px;
+    left: 0;
+  }
+
+  /* Get Site */
+
+  .get-site::after {
+    width: 91%;
+    height: 45px;
+  }
+
+  .get-site .get-site-inner{
+    padding: 0;
+  }
+
+  .get-site .item{
+    margin: 15px 30px;
+  }
+
+  .get-site .item a{
+    font-size: 20px;
+  }
+
+  .get-site .item a img{
+    width: 70px;
+    height: 70px;
+  }
+
+  /* Social Media Items */
+  .social-media .social-media-inner .items .item{
+    margin: 0 15px 20px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 15px 0;
+  }
+
+  .footer .copyright .company-copyright {
+    font-size: 14px;
+    margin: 0 auto 10px;
+  }
+
+  .footer .copyright .site-copyright{
+    font-size: 16px;
+  }
+
+  .footer .copyright .site-copyright img{
+    width: 27px;
+    vertical-align: top;
+  }
+
+
+  /* About Me */
+
+  .about-me .close-btn{
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .about-me .close-btn i{
+    font-size: 14px;
+  }
+
+  .about-me .container{
+    width: 100%;
+  }
+
+  .about-me-inner .about-me-header .text-cv::before{
+    font-size: 16px;
+  }
+
+  .about-me-inner .about-me-header .text-cv{
+    font-size: 30px;
+  }
+
+  .about-me-inner .about-me-header .header-box p{
+    font-size: 27;
+  }
+
+  .about-me-inner .about-me-header .header-box .line{
+    width: 50%;
+    height: 20px;
+  }
+
+  .about-me-inner .about-me-header .header-box img{
+    width: 300px;
+    height: 300px;
+  }
+
+  .title-box{
+    padding: 35px 20px;
+  }
+
+  .about-me-inner .about-me-body .intro .info-text{
+    padding: 0 10px;
+  }
+
+  .about-me-inner .about-me-body .intro .info-text p{
+    font-size: 20px;
+  }
+
+  .about-me-inner .about-me-body .intro .info-text span{
+    font-size: 16px;
+  }
+
+  .container-box{
+    width: 100%;
+  }
+
+  h3.title-box-header{
+    font-size: 22px;
+  }
+
+  h3.title-box-header::after{
+    width: 45%;
+    height: 17px;
+  }
+
+  .about-me-inner .about-me-body .qualifications-box ul{
+    padding-right: 15px;
+
+  }
+
+  .about-me-inner .about-me-body .qualifications-box ul li{
+    font-size: 16px;
+  }
+
+  .list-block{
+    width: 100%;
+    padding: 15px !important;
+  }
+
+  h3.list-title{
+    font-size: 25px;
+    text-align: center !important;
+  }
+
+  ul.list-bullets li{
+    font-size: 18px;
+  }
+
+  ul.list-bullets li::after{
+    width: 5px;
+    height: 5px;
+    right: -12px;
+  }
+
+  .box-img{
+    width: 250px;
+    height: 250px;
+  }
+
+  .box-line{
+    width: 55% !important;
+    height: 20px !important;
+    margin: 5px auto 0 !important;
+  }
+
+  .box-title{
+    margin: 20px 0 0;
+    padding: 0 10px;
+    font-size: 25px;
+  }
+
+  .container-box{
+    padding: 25px;
+  }
+
+  .literature .container-box p{
+    font-size: 17px;
+  }
+
+  .other-jobs .for-title > span{
+    text-align: center;
+  }
+
+  .other-jobs .for-title .present-project p{
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+/* Extra Small devices */
+@media (max-width:380px){
+
+  /* Header */
+  .navbar .navbar-nav .nav-item:not(:last-child){
+    margin-left: 0;
+  }
+  
+  /* Carousel */
+
+  /* All Sledes */
+  .intro-carousel, .intro-carousel .item{
+    height: 225px;
+  }
+
+  .intro-carousel-inner .item .item-info .item-text .item-text-inner{
+    margin: 0;
+  }
+
+  .intro-carousel-inner .item .intro-text{
+    font-size: 14px;
+  }
+
+  .intro-carousel-inner .item .intero-heading{
+    font-size: 27px;
+  }
+
+  .intro-carousel-inner .item .intero-heading{
+    padding-bottom: 10px;
+  }
+
+  .intro-carousel-inner .item .intro-text2 {
+    font-size: 14px;
+    margin: 25px 0 0;
+  }
+
+  /* Slide 2 */
+
+  .intro-carousel-inner .item.slide2 .intro-text{
+    line-height: 1;
+    
+  }
+
+  .intro-carousel-inner .item.slide2 .keyword{
+    font-size: 16px;
+    line-height: 1;
+    margin: 0;
+    margin: 7px 0 10px;
+  }
+
+  .intro-carousel-inner .item.slide2 .subscribe-to-channel{
+    margin: 20px 0 0;
+  }
+
+  .intro-carousel-inner .item.slide2 .subscribe-to-channel span{
+    font-size: 14px;
+  }
+
+  .intro-carousel-inner .item.slide2 .subscribe-to-channel .subscribe {
+    padding: 3px 6px;
+    font-size: 12px;
+    margin: 10px 0 0;
+    border-radius: 2px;
+  }
+
+  .intro-carousel-inner .item.slide2 .subscribe-to-channel .subscribe i{
+    font-size: 14px;
+  }
+
+  /* Intro Wrapper */
+  .intro-wrapper{
+    padding: 70px 0;
+  }
+
+  .intro-wrapper .wrapper-inner .wrapper-title{
+    font-size: 20px;
+  }
+
+  .intro-wrapper .wrapper-inner .author{
+    font-size: 18px;
+    bottom: 40px;
+  }
+
+  .intro-wrapper .wrapper-inner .author2{
+    top: 40px;
+    font-size: 18px;
+  }
+
+  /* Get Site */
+  .get-site .item{
+    margin: 15px;
+  }
+
+  .get-site .item a{
+    padding: 30px 20px;
+    font-size: 18px;
+  }
+
+  .get-site .item a img{
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Social Media Items */
+  .social-media .social-media-inner .items .item{
+    margin: 0 10px 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+
+  .social-media .social-media-inner .items .item i{
+    line-height: 50px;
+  }
+
+  /* Footer */
+  .footer .copyright .company-copyright{
+    margin-bottom: 5px;
+  }
+
+  /* About Me */
+
+  .about-me .close-btn{
+    right: 5px;
+    top: 5px;
+  }
+
+  .about-me-inner .about-me-header .header-box img{
+    width: 220px;
+    height: 210px;
+  }
+
+  .about-me-inner .about-me-header .header-box .line{
+    width: 75%;
+  }
+
+  h3.list-title{
+    font-size: 22px;
+  }
+
+  ul.list-bullets li{
+    font-size: 16px;
+  }
+
+  .box-img{
+    width: 180px;
+    height: 180px;
+  }
+
+  .box-line{
+    width: 80% !important;
+  }
+
+  .box-title{
+    font-size: 22px;
+  }
+
+  h3.title-box-header{
+    font-size: 20px;
+  }
+
+  h3.title-box-header::after{
+    width: 80%;
+  }
+
+  .literature .container-box p{
+    font-size: 14px;
+  }
+
+  .other-jobs .present-project p{
+    font-size: 16px;
+  }
+}

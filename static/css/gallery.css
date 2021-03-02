@@ -1,0 +1,242 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******************************
+
+[Table of Contents]
+
+1. Page Content
+2. Responsiv Page
+
+******************************/
+
+.header{
+  position: relative;
+}
+
+.header::before{
+  content: "";
+  position: absolute;
+  bottom: -81px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-image: url(../images/section/13_bg.JPG);
+  transform: rotate(180deg);
+  z-index: -1;
+}
+
+/*********************************
+1. Page Content
+*********************************/
+
+.gallery{
+  padding: 60px 0 100px;
+  min-height: calc(100vh - 200px);
+}
+
+.gallery .head{
+  margin-bottom: 70px;
+}
+
+.gallery .head .breadcrumb{
+  background-color: transparent;
+  padding: 0;
+}
+
+.gallery .head .breadcrumb li{
+  font-size: 18px;
+}
+
+.gallery .head .breadcrumb li a{
+  color: #000;
+}
+
+.gallery .head h1{
+  font-weight: 600;
+  font-size: 36px;
+  letter-spacing: 1px;
+  margin: 10px 0 20px;
+  line-height: 1.4;
+  position: relative;
+  display: inline-block;
+}
+
+.gallery .head h1::before{
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  width: 100px;
+  height: 4px;
+  background-color: var(--seconde-color);
+}
+
+.gallery .head h1::after{
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  width: 60px;
+  height: 4px;
+  background-color: var(--seconde-color);
+}
+
+.gallery-items{
+  position: relative;
+}
+
+.gallery-items .item{
+  height: 100%;
+  display: flex;
+}
+
+.gallery-items .item .item-inner{
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+  z-index: 5;
+  background-color: #fff;
+  margin: 0 5px 30px;
+  cursor: pointer;
+
+}
+
+.gallery-items .item .item-inner:hover .img::after{
+  opacity: .5;
+  visibility: visible;
+}
+
+.gallery-items .item .item-inner .img{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.gallery-items .item .item-inner .img img{
+  height: 100%;
+  max-height: 300px;
+}
+
+.gallery-items .item .item-inner .img::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #25014b;
+  opacity: 0;
+  transition: .3s ease;
+  visibility: hidden;
+}
+
+.gallery-items .item .item-inner .icon{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 30%);
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #25014b;
+  border-radius: 50%;
+  transition: .3s ease-in-out;
+  transition-delay: .1s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.gallery-items .item .item-inner:hover .icon{
+  transform: translate(-50%,-50%);
+  opacity: 1;
+  visibility: visible;
+}
+
+.gallery-items .item .item-inner .icon i{
+  color: #fff;
+  font-size: 22px;
+  font-family: "Font Awesome 5 Pro";
+}
+
+.gallery-pp{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000b3;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  display: none;
+}
+
+.gallery-pp.open{
+  display: flex;
+}
+
+.gallery-pp .gallery-pp-content{
+  position: relative;
+}
+
+.gallery-pp .gallery-pp-content .close-btn{
+  width: 40px;
+  height: 40px;
+  text-align: right;
+  cursor: pointer;
+  position: absolute;
+  top: -40px;
+  right: 0;
+}
+
+.gallery-pp .gallery-pp-content .close-btn i{
+  color: #fff;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.gallery-pp .gallery-pp-content img{
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 500px;
+}
+
+.gallery-pp .gallery-pp-content .counter{
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  color: #fff;
+  font-size: 16px;
+}
+
+.gallery-pp .gallery-pp-controller .prev,
+.gallery-pp .gallery-pp-controller .next{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #25014b;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.gallery-pp .gallery-pp-controller .prev{
+  left: 30px;
+}
+
+.gallery-pp .gallery-pp-controller .next{
+  right: 30px;
+}

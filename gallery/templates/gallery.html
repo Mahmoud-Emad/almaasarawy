@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block links %}
+<nav class="navbar navbar-expand-lg">
+  <!-- logo -->
+  <a class="navbar-brand" href="{% url 'homepage' %}">
+    <img src="{% static 'images/1_logo.jpg' %}" alt="logo">
+  </a>
+
+  <!-- Hamurger Icon -->
+  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="bars-icon"><span></span></span>
+  </button>
+
+  <!-- Links -->
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item ">
+        <a class="nav-link" href="{% url 'homepage' %}">الرئيسية</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link about-me-link" href="#">تعريف بالشيخ</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          المكتبة
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          
+          {% for category in categories %}
+              <a class="dropdown-item" href="{% url 'sounds' category.slug %}">{{category.Title}}</a>    
+          {% endfor %}
+            
+        </div>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="{% url 'News' %}">الأخبار</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'gallery' %}">الصور</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'contact' %}">للتواصل</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+{% endblock links %}
+  
+{% block home %}
+
+  <div class="gallery">
+    <div class="container">
+      <div class="head">
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+          <li class="breadcrumb-item active">الصور</li>
+        </ul>
+        <h1>الصور</h1>
+      </div>
+      <div class="gallery-items">
+        <div class="row">
+          
+          {% for image in gallery %}
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="item">
+                  <div class="item-inner">
+                    <div class="img">
+                      <img src="{{image.Image.url}}" alt="almaasarawy">
+                    </div>
+                    <span class="icon">
+                      <i class="far fa-search-plus"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+          {% endfor %}
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ****************
+        Gallery Popup
+       **************** -->
+       <div class="gallery-pp">
+        <div class="gallery-pp-content">
+          <div class="close-btn"><i class='fas fa-times'></i></div>
+          <img src="images/gallery/almaasarawy.jpg" alt="">
+          <span class="counter">1 من 3</span>
+        </div>
+        <div class="gallery-pp-controller">
+          <div class="next"><i class="fas fa-angle-right"></i></div>
+          <div class="prev"><i class="fas fa-angle-left"></i></div>
+        </div>
+      </div>
+{% endblock home %}

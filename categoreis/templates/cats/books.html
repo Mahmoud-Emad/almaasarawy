@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block home %}
+
+
+  <!-- ****************
+           Content 
+       **************** -->
+  <div class="category">
+    <div class="container">
+      <div class="head">
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+          <li class="breadcrumb-item active">الكتب</li>
+        </ul>
+        <h1>الكتب</h1>
+      </div>
+      <div class="category-items">
+        <div class="row">
+          
+          {% for book in books %}
+            {% if not book.parent %}
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
+                <a href="{{book.Book_link}}" class="item" target="_blank">
+                  <div class="item-inner">
+                    {% if book.image %}
+                      <div class="item-icon">
+                        <img src="{{book.image.url}}" alt="icon">
+                      </div>
+                    {% else %}
+                      <div class="item-icon">
+                        <img src="{% static 'images/mtoon.png' %}" alt="icon">
+                      </div>
+                    {% endif %}
+                    <h2>{{book.title}}</h2>
+                  </div>
+                </a>
+              </div>
+            {% endif %}
+          {% endfor %}
+            
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock home %}
