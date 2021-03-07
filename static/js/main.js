@@ -13,7 +13,6 @@
 7. Category Items
   7.1 Init Counter Loved
 8. Gallery
-9. Alert Sended Message
 
 ******************************/
 
@@ -83,12 +82,21 @@ $(document).ready(()=>{
 
   function loadWindow(){ 
     bodyScroll()
-    $(window).on("load",()=>{  
-      bodyScroll();
-      $(preloader).addClass("hide")
-      setTimeout(()=>{
-        $(preloader).css("display","none")
-      },2000)
+    let loaderWindow = $(".preloader"),
+    loaderImg    = $(".image");
+
+    $(loaderImg).on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",()=>{
+        loaderImg.addClass("finish");
+    });
+    // Stop Body Scroll To View Preloader Without Scrollbar
+    $(window).on("load",()=>{
+        setTimeout(()=>{
+            $("body").removeClass("stop-scroll");
+            $(loaderWindow).addClass("hide");
+            setTimeout(()=>{
+                $(loaderWindow).css("display","none");
+            },600)
+        },500)
     })
   }
 
@@ -274,16 +282,16 @@ $(document).ready(()=>{
       galleryBox.toggleClass("open");
       $(document).on("keydown",(e)=>{
         if(galleryBox.hasClass("open")){
+          if(e.keyCode === 27){
+            if(galleryBox.hasClass("open")){
+              galleryBox.removeClass("open");
+            }
+          }
           if(e.keyCode === 37){
             next()
           }
           else if(e.keyCode === 39){
             prev()
-          }
-          else if(e.keyCode === 27){
-            if(galleryBox.hasClass("open")){
-              galleryBox.removeClass("open");
-            }
           }
         }
       })

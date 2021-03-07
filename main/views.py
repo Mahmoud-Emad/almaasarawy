@@ -1,5 +1,5 @@
 from categoreis.models import MotherCategory,Category,SubCategory,SubMultiCategory
-from .models import SoundTrack
+from .models import SoundTrack,IconsModell
 from django.shortcuts import render
 
 
@@ -12,6 +12,7 @@ def SoundCloudDetail(request,cats,category_slug,series_slug,sound_slug,Track_slu
     sound = SoundTrack.objects.get(slugTrack=Track_slug)
     Tracks = SubMultiCategory.objects.filter(parent=category)
     Sounds_detail = SubMultiCategory.objects.filter(parent = category)
+    icons = IconsModell.objects.all()
     context = {
         'categories':categories,
         'category_cats':category_cats,
@@ -20,6 +21,7 @@ def SoundCloudDetail(request,cats,category_slug,series_slug,sound_slug,Track_slu
         'Tracks':Tracks,
         'Track':Track,
         'sound':sound,
-        'Sounds_detail':Sounds_detail
+        'Sounds_detail':Sounds_detail,
+        'icons':icons
     }
     return render(request , "cats/cat-item.html" , context)

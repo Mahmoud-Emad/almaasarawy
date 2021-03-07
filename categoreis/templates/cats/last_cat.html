@@ -68,7 +68,7 @@
             
             {% if Track.Chicese_list == 'Sound Cloud Track' %}
                 <div class="category-items">
-                    <div class="row">
+                    <div class="row justify-content-center">
                         <div class="col-12">
                             <div class="cat-item">
                                 <div class="iframe-item sound">
@@ -76,7 +76,6 @@
                                     src="{{Track.SoundTrackEmbed}}">
                                     </iframe>
                                 </div>
-                            <div class="line"></div>
 
                             </div>
                         </div>
@@ -84,27 +83,25 @@
                 </div>
             {% elif Track.Chicese_list == 'YouTube Video' %}
                 <div class="category-items">
-                    <div class="row">
+                    <div class="row justify-content-center">
                     <div class="col-12">
                         <div class="cat-item">
                           <div class="iframe-item video">
                               <iframe src="{{Track.YouTubeVideoEmbed}}" 
                               frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                           </div>
-                          <div class="line"></div>
-          
                         </div>
                     </div>
                     </div>
                 </div>
             {% else %}
             <div class="category-items">
-                <div class="row">
+                <div class="row justify-content-center">
                     {% for some in sound %}
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
                             <a href="{% url 'SoundCloudDetail' category_cats.slug category_back.slug category.slug Track.slug some.slugTrack %}" class="item">
                                 <div class="item-inner">
-                                    <h2>{{some.Title}}</h2>
+                                    <h2>{{some.Title|slice:"20"|safe}} {% if some.Title|length > 20 %}..{% endif %}</h2>
                                 </div>
                             </a>
                         </div>
@@ -115,7 +112,7 @@
             {% endif %}
                 
             <div class="category-items">
-                <div class="row">
+                <div class="row justify-content-center">
                 </div>
             </div>
         </div>

@@ -5,11 +5,13 @@ from django.urls import reverse
 from django.core.mail import send_mail
 from django.conf import settings
 from categoreis.models import MotherCategory
+from main.models import IconsModell
 
 
 def ContactFormView(request):
     form_contact = ContactForm(request.POST)
     categories = MotherCategory.objects.all()
+    icons = IconsModell.objects.all()
     if request.method == 'POST':
         subject = request.POST['Subject']
         email = request.POST['Email']
@@ -29,6 +31,7 @@ def ContactFormView(request):
     else:
         form = ContactForm()
     context={'form_contact':form_contact,
-                'categories':categories
+                'categories':categories,
+                'icons':icons
             }
     return render(request,'contact.html',context)

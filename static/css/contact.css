@@ -30,7 +30,7 @@
 1. Page Content
 *********************************/
 .contact{
-  padding: 60px 0 100px;
+  padding: 60px 0 0;
   min-height: calc(100vh - 200px);
 }
 

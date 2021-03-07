@@ -65,29 +65,26 @@
       </div>
       {% if category.Chicese_list == 'YouTube Video' %}
           <div class="category-items">
-            <div class="row">
-            <div class="col-12">
+            <div class="row justify-content-center">
+            <div class="col-md-10 col-12">
                 <div class="cat-item">
                   <div class="iframe-item video">
                       <iframe src="{{category.YouTubeVideoEmbed}}" 
                       frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                   </div>
-                  <div class="line"></div>
-
                 </div>
             </div>
             </div>
           </div>
       {% elif category.Chicese_list == 'Sound Cloud Track' %}
           <div class="category-items">
-            <div class="row">
+            <div class="row justify-content-center">
               <div class="col-12">
                   <div class="cat-item">
                     <div class="iframe-item sound">
                         <iframe src="{{category.SoundTrackEmbed}}" 
                         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                     </div>
-                  <div class="line"></div>
                     <div class="fav">
                         <span>0</span>
                         <i class="fal fa-heart"></i>
@@ -98,7 +95,7 @@
           </div>
       {% else %}
           <div class="category-items">
-            <div class="row">
+            <div class="row justify-content-center">
               
               {% for some in Tracks %}
                 <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">

@@ -182,22 +182,57 @@ button:focus{
   opacity: 0;
 }
 
-.preloader span{
-  display: block;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  border: 4px solid var(--seconde-color);
-  border-right-color: transparent;
-  animation: spinner .5s linear infinite
+.preloader .preloader-inner{
+  width: 40%;
+  text-align: center;
+  overflow: hidden;
 }
 
-@keyframes spinner{
+.preloader .preloader-inner .image{
+  width: 70px;
+  text-align: center;
+  margin: 0 auto 20px;
+  animation: topImg .5s ease;
+  animation-delay: .5s;
+  visibility: hidden;
+}
+
+.preloader .preloader-inner .image.finish{
+  visibility: visible;
+}
+
+.preloader .preloader-inner .image img{
+  width: 100%;
+  object-fit: fill;
+}
+
+.preloader .preloader-inner span{
+  display: block;
+  height: 3px;
+  width: 185px;
+  background-color: #fff;
+  margin: auto;
+  animation: widthFull .5s ease;
+  position: relative;
+  z-index: 10;
+}
+
+@keyframes widthFull{
   0%{
-    transform: rotate(0);
+    width: 0%;
   }
   100%{
-    transform: rotate(360deg);
+    width: 185px;
+  }
+}
+
+@keyframes topImg{
+  0%{
+    transform: translateY(100px);
+  }
+  100%{
+    transform: translateY(0);
+    visibility: visible;
   }
 }
 
@@ -333,7 +368,7 @@ button:focus{
 *********************************/
 
 .intro-carousel{
-  height: 580px;
+  height: 600px;
   width: 100vw;
   overflow: hidden;
 
@@ -343,7 +378,7 @@ button:focus{
 
 .intro-carousel-inner .item{
   width: 100%;
-  height: 580px;
+  height: 600px;
   overflow: hidden;
 }
 
@@ -391,7 +426,7 @@ button:focus{
 .intro-carousel-inner .item .item-info .item-text .item-text-inner{
   width: fit-content;
   color: #fff;
-  margin-right: -50px;
+  /* margin-right: -50px; */
 }
 
 .intro-carousel-inner .item .intro-text{
@@ -487,6 +522,10 @@ button:focus{
   width: 485px;
 }
 
+.item.slide2 .item-info .item-text .item-text-inner{
+  margin-right: -50px;
+}
+
 .intro-carousel-inner .item.slide2 .keyword{
   margin: 15px 0 25px;
   padding: 0;
@@ -537,7 +576,7 @@ button:focus{
 *********************************/
 
 .intro-wrapper{
-  padding: 80px 12px;
+  padding: 85px 12px;
   background-color: var(--main-color);
   position: relative;
 }
@@ -600,21 +639,6 @@ button:focus{
   position: relative;
 }
 
-.get-site::after{
-  content: "";
-  position: absolute;
-  display: block;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 35%;
-  height: 30px;
-  background-image: url(../images/section/3_line.PNG);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 .get-site .get-site-inner{
   padding: 0 45px;
 }
@@ -652,6 +676,21 @@ button:focus{
 .social-media{
   padding: 60px 0;
   position: relative;
+}
+
+.social-media::after{
+  content: "";
+  position: absolute;
+  display: block;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 35%;
+  height: 30px;
+  background-image: url(../images/section/3_line.PNG);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .social-media .social-media-inner{
@@ -899,40 +938,29 @@ ul.list-bullets li::after {
   width: 100%;
   z-index: 10;
   overflow-y: auto;
+  overflow-x: hidden;
   background-color: rgba(0,0,0,.8);
   opacity: 0;
   display: none;
   transition: .3s ease;
-
 }
 
 .about-me.open{
   opacity: 1;
 }
 
-.about-me .close-btn{
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: 15px;
-  right: -100px;
-  background-color: var(--about-header-color);
+.about-me .about-me-main{
+  min-height: 100vh;
+  max-width: 1350px;
+  width: 85%;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 100;
 }
-
-.about-me .close-btn i{
-  color: #fff;
-  font-size: 18px;
-} 
 
 .about-me .about-me-inner{
   background-color: var(--bg-color);
-  min-height: 100vh;
   position: relative;
   padding: 35px 0;
   text-align: center;
@@ -953,6 +981,26 @@ ul.list-bullets li::after {
 .about-me-inner.after::after{
   transform: rotate(0);
 }
+
+.about-me .close-btn{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: var(--about-header-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.about-me .close-btn i{
+  color: #fff;
+  font-size: 18px;
+} 
 
 .about-me-inner .about-me-header .text-cv{
   margin-top: 0;

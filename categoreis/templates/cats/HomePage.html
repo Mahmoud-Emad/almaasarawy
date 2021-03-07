@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% block links %}
 <nav class="navbar navbar-expand-lg">
   <!-- logo -->
@@ -97,13 +98,13 @@
           </div>
           <div class="item-info">
             <div class="row justify-content-center h-100">
-              <div class="col-sm-5 col-6 d-flex align-items-end pr-0 h-100">
+              <div class="col-lg-5 col-sm-6 col-6 d-flex align-items-end pr-0 h-100">
                 <div class="item-banner">
                   <img src="{% static 'images/section/sheikh_slide02.png' %}" alt="almaasarawy">
                 </div>
               </div>
 
-              <div class="col-sm-7 col-6 pl-0 pr-sm-1 pr-0 h-100">
+              <div class="col-lg-7 col-sm-6 col-6 pl-0 pr-sm-1 pr-0 h-100">
                 <div class="item-text">
                   <div class="item-text-inner">
                     <p class="intro-text">تعلم القرآن</p>
@@ -178,57 +179,17 @@
         </div>
       </div>
     </div>
-
-    <!-- ****************
-            Social Media 
-          **************** -->
-    <div class="social-media">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="social-media-inner">
-              <div class="items d-flex justify-content-center align-items-center flex-wrap">
-                
-                {% for icon in icons %}
-                  
-                  {% if icon.Chicese_list == 'Facebook Icon' %}
-                      <a href="{{icon.Link}}" 
-                      class="item" id="facebook" rel="noreferrer" 
-                      target="_blank">
-                      <i class="fab fa-facebook-f"></i></a>
-                  {% elif icon.Chicese_list == 'YouTube Icon' %}
-                      <a href="{{icon.Link}}" 
-                      class="item" id="youtube" rel="noreferrer" 
-                      target="_blank">
-                      <i class="fab fa-youtube"></i></a>
-                  {% elif icon.Chicese_list == 'SoundCloud Icon' %}
-                      <a href="{{icon.Link}}" 
-                      class="item" id="soundcloud" rel="noreferrer" 
-                      target="_blank">
-                      <i class="fab fa-soundcloud"></i></a>
-                  {% elif icon.Chicese_list == 'Twitter Icon' %}
-                      <a href="{{icon.Link}}" 
-                      class="item" id="twitter" rel="noreferrer" 
-                      target="_blank">
-                      <i class="fab fa-twitter"></i></a>
-                  {% elif icon.Chicese_list == 'Insta Icon' %}
-                      <a href="{{icon.Link}}" 
-                      class="item" id="instagram" rel="noreferrer" 
-                      target="_blank">
-                      <i class="fab fa-instagram"></i></a>
-                  {% elif icon.Chicese_list == 'Telegram Icon' %}
-                      <a href="{{icon.Link}}" 
-                      class="item" id="telegram" rel="noreferrer" 
-                      target="_blank">
-                      <i class="fab fa-telegram-plane"></i></a>
-                  {% endif %}
-                    
-                {% endfor %}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
+  <script>
+    // Basmalah Sound On Window Loading
+    let audio = new Audio("{% static 'sounds/basmalah.mp3' %}")
+    // audio.setAttribute("autoplay","autoplay");
+    audio.setAttribute("type","audio/mpeg");
+    window.addEventListener("load",()=>{
+      setTimeout(()=>{
+        audio.play()
+        console.log('its working')
+      },600);
+    });
+  </script>
 {% endblock home %}

@@ -9,8 +9,8 @@ class ContactForm(forms.ModelForm):
         fields = '__all__'
         exclude = ('Date',)
         widgets = {
-            'Name': forms.TextInput(attrs={'class':'form-control','placeholder':"الاسم.."}),
+            'Name': forms.TextInput(attrs={'class':'form-control','placeholder':"الإسم.."}),
             'Email': forms.EmailInput(attrs={'class':'form-control','placeholder':"البريد الالكتروني.."}),
-            'Subject': forms.TextInput(attrs={'class':' form-control','placeholder':"موضوع الرساله.."}),
-            'Message': forms.Textarea(attrs={'class':'form-control','placeholder':"الرساله.."}),
+            'Subject': forms.TextInput(attrs={'class':' form-control','placeholder':"موضوع الرسالة.."}),
+            'Message': forms.Textarea(attrs={'class':'form-control','placeholder':"الرسالة.."}),
         }
