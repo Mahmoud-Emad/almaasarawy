@@ -1,4 +1,4 @@
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import render
 from .models import MotherCategory , Category , SubCategory , SubMultiCategory 
 from main.models import SoundTrack,IconsModell
 
@@ -11,17 +11,8 @@ from main.models import SoundTrack,IconsModell
 
 '''
 
-# Home above
 
-def mainHome(request):
-    categories = MotherCategory.objects.all()
-    icons = IconsModell.objects.all()
-    context = {
-        'categories':categories,
-        'icons':icons
-    }
-    return render(request , "cats/HomePage.html" , context)
-
+# All category views
 def CatsView(request):
     categories = MotherCategory.objects.all()
     icons = IconsModell.objects.all()
@@ -32,7 +23,7 @@ def CatsView(request):
     return render(request , "cats/CatsView.html" , context)
 
 
-
+# main standerd category views
 def menu_categories(request,cats):
     categories = MotherCategory.objects.all()
     category = MotherCategory.objects.get(slug=cats)
@@ -46,7 +37,7 @@ def menu_categories(request,cats):
             
         }
     return render(request , "cats/sounds.html" , context)
-
+# sub main category views
 def SubCategoryD(request,cats,category_slug):
     categories = MotherCategory.objects.all()
     category_cats = MotherCategory.objects.get(slug=cats)
@@ -62,7 +53,7 @@ def SubCategoryD(request,cats,category_slug):
 
     }
     return render(request , "cats/category.html" , context)
-
+# sub of sub main category views
 def SubTwoCategoryD(request,cats,category_slug,series_slug):
     categories = MotherCategory.objects.all()
     category_cats = MotherCategory.objects.get(slug=cats)
@@ -80,7 +71,7 @@ def SubTwoCategoryD(request,cats,category_slug,series_slug):
     }
     return render(request , "cats/category_Qouran.html" , context)
 
-
+# sub of sub of sub main category views
 def SubMultiCategoryl(request,cats,category_slug,series_slug,sound_slug):
     categories = MotherCategory.objects.all()
     category_cats = MotherCategory.objects.get(slug=cats)

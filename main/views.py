@@ -3,6 +3,17 @@ from .models import SoundTrack,IconsModell
 from django.shortcuts import render
 
 
+# Home above
+
+def mainHome(request):
+    categories = MotherCategory.objects.all()
+    icons = IconsModell.objects.all()
+    context = {
+        'categories':categories,
+        'icons':icons
+    }
+    return render(request , "HomePage.html" , context)
+
 def SoundCloudDetail(request,cats,category_slug,series_slug,sound_slug,Track_slug):
     categories = MotherCategory.objects.all()
     category_cats = MotherCategory.objects.get(slug=cats)
@@ -24,4 +35,14 @@ def SoundCloudDetail(request,cats,category_slug,series_slug,sound_slug,Track_slu
         'Sounds_detail':Sounds_detail,
         'icons':icons
     }
-    return render(request , "cats/cat-item.html" , context)
+    return render(request , "cat-item.html" , context)
+
+
+
+'''
+    .__(.)< (MEOW)
+    \___)
+~~~~~~~~~~~~~
+    --Mahmoud Emad
+
+'''

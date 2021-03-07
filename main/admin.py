@@ -4,3 +4,12 @@ from main.models import SoundTrack,IconsModell
 
 admin.site.register(SoundTrack)
 admin.site.register(IconsModell)
+
+
+'''
+    .__(.)< (MEOW)
+    \___)
+~~~~~~~~~~~~~
+    --Mahmoud Emad
+
+'''

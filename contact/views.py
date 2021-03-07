@@ -35,3 +35,13 @@ def ContactFormView(request):
                 'icons':icons
             }
     return render(request,'contact.html',context)
+
+
+
+'''
+    .__(.)< (MEOW)
+    \___)
+~~~~~~~~~~~~~
+    --Mahmoud Emad
+
+'''

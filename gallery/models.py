@@ -5,3 +5,12 @@ class galleryModell(models.Model):
 
     def __str__(self):
         return str(self.Image)
+
+
+'''
+    .__(.)< (MEOW)
+    \___)
+~~~~~~~~~~~~~
+    --Mahmoud Emad
+
+'''

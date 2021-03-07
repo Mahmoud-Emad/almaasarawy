@@ -12,7 +12,6 @@ from . import  views
 # Url Slider Model Above
 
 urlpatterns = [
-    path('', views.mainHome,name='homepage'),
     path('cats/', views.CatsView,name='CatsView'),
     path('cats/<slug:cats>/', views.menu_categories,name='sounds'),
     path("cats/<slug:cats>/<slug:category_slug>/", views.SubCategoryD, name="category_blocks"),  

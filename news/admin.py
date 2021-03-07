@@ -4,3 +4,13 @@ from .models import NewsModell
 
 
 admin.site.register(NewsModell)
+
+
+
+'''
+    .__(.)< (MEOW)
+    \___)
+~~~~~~~~~~~~~
+    --Mahmoud Emad
+
+'''

@@ -15,14 +15,12 @@ class SoundTrack(models.Model):
     Chicese_list = models.CharField(max_length=255,choices=Tracks,verbose_name='Choice What is it')
     TrackLink = models.CharField(max_length=10000,verbose_name='Item Link')
     slugTrack = models.SlugField(max_length=255,null=True,blank=True,verbose_name='Let this field empty', unique=True)
-    # likes = models.ManyToManyField(User, related_name='blogpost_like')
 
-    # def number_of_likes(self):
-    #     return self.likes.count()
     def __str__(self): 
-        return self.Title
+        return '( ' + self.Title + ' من ( ' + str(self.category)
     def save(self, *args, **kwargs): 
-        self.slugTrack = slugify(str(self.TitleEnglish) + str(self.TrackLink[3:22]) + '-id-' + str(self.id))
+        self.slugTrack = slugify(str(self.TitleEnglish) + str(self.TrackLink[7:22]) + '-id-' + str(self.id))
+        print(self.id)
         super(SoundTrack,self).save(*args, **kwargs)
     def YouTubeVideoEmbed(self):
         return(self.TrackLink).replace('watch?v=','embed/')   
@@ -50,3 +48,13 @@ class IconsModell(models.Model):
         return str(self.Chicese_list)
     class Meta:
         verbose_name_plural             =                       "Social Media Icons"  
+
+
+
+'''
+    .__(.)< (MEOW)
+    \___)
+~~~~~~~~~~~~~
+    --Mahmoud Emad
+
+'''

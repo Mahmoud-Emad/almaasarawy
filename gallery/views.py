@@ -13,3 +13,14 @@ def galleryView(request):
         'icons':icons
     }
     return render(request , "gallery.html" , context)
+
+
+
+
+'''
+    .__(.)< (MEOW)
+    \___)
+~~~~~~~~~~~~~
+    --Mahmoud Emad
+
+'''

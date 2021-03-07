@@ -93,7 +93,7 @@ class SubMultiCategory(models.Model):
     class Meta:
         verbose_name_plural             =                       "4th Child Categoreis"
     def __str__(self):
-        return (self.Title)
+        return '( ' + self.Title + ' من ( ' + str(self.parent)
     def YouTubeVideoEmbed(self):
         return(self.TrackLink).replace('watch?v=','embed/')
     def SoundTrackEmbed(self):

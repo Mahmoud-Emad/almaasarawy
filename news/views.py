@@ -17,3 +17,12 @@ def News(request):
         'icons':icons
     }
     return render(request , "news.html" , context)
+
+
+'''
+    .__(.)< (MEOW)
+    \___)
+~~~~~~~~~~~~~
+    --Mahmoud Emad
+
+'''

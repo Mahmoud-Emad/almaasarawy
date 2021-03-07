@@ -11,3 +11,14 @@ class NewsModell(models.Model):
         return self.Title
     class Meta():
         verbose_name_plural = 'News Model'
+
+
+
+
+'''
+    .__(.)< (MEOW)
+    \___)
+~~~~~~~~~~~~~
+    --Mahmoud Emad
+
+'''

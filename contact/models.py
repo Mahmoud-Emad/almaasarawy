@@ -10,3 +10,12 @@ class ContactModel(models.Model):
     def __str__(self):
         return str(self.Name) + str(" < | > ") + str(self.Email)
 
+
+
+'''
+    .__(.)< (MEOW)
+    \___)
+~~~~~~~~~~~~~
+    --Mahmoud Emad
+
+'''

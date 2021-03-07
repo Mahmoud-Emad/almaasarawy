@@ -3,3 +3,14 @@ from news import views
 urlpatterns = [
     path('', views.News,name='News'),
 ]
+
+
+
+
+'''
+    .__(.)< (MEOW)
+    \___)
+~~~~~~~~~~~~~
+    --Mahmoud Emad
+
+'''

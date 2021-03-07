@@ -14,3 +14,12 @@ class ContactForm(forms.ModelForm):
             'Subject': forms.TextInput(attrs={'class':' form-control','placeholder':"موضوع الرسالة.."}),
             'Message': forms.Textarea(attrs={'class':'form-control','placeholder':"الرسالة.."}),
         }
+
+
+'''
+    .__(.)< (MEOW)
+    \___)
+~~~~~~~~~~~~~
+    --Mahmoud Emad
+
+'''
